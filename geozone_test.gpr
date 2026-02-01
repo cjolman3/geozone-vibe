@@ -1,4 +1,5 @@
 with "geozone_lib";
+with "aunit";
 
 project Geozone_Test is
 
