@@ -252,10 +252,10 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/cjolman3/MyCode/geozone_vibe/obj/test/test_weapon.o
-   --   -L/home/cjolman3/MyCode/geozone_vibe/obj/test/
-   --   -L/home/cjolman3/MyCode/geozone_vibe/obj/test/
-   --   -L/home/cjolman3/MyCode/geozone_vibe/lib/
+   --   /home/charlesjolman/MyCode/geozone_vibe/obj/test/test_weapon.o
+   --   -L/home/charlesjolman/MyCode/geozone_vibe/obj/test/
+   --   -L/home/charlesjolman/MyCode/geozone_vibe/obj/test/
+   --   -L/home/charlesjolman/MyCode/geozone_vibe/lib/
    --   -L/usr/lib/gcc/x86_64-linux-gnu/13/adalib/
    --   -shared
    --   -lgnat-13

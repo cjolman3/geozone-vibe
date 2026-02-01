@@ -8,7 +8,7 @@ library project Geozone_Lib is
    for Library_Kind use "static";
 
    package Compiler is
-      for Switches ("Ada") use ("-gnat95", "-g", "-O2");
+      for Switches ("Ada") use ("-gnat05", "-g", "-O2");
       for Switches ("C++") use ("-std=c++14", "-g", "-O2");
    end Compiler;
 

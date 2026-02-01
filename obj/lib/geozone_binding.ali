@@ -1,7 +1,7 @@
 V "GNAT Lib v13"
 A -O2
 A -gnatA
-A -gnat95
+A -gnat05
 A -g
 A -mtune=generic
 A -march=x86-64
@@ -13,13 +13,13 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 
-U geozone_binding%s	geozone_binding.ads	a10bc388 NE OO PK
+U geozone_binding%s	geozone_binding.ads	39a567bc NE OO PK
 W interfaces%s		interfac.ads		interfac.ali
 W interfaces.c%s	i-c.adb			i-c.ali
 
 D ada.ads		20240521074738 76789da1 ada%s
 D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
-D geozone_binding.ads	20260123025033 fd51af9f geozone_binding%s
+D geozone_binding.ads	20260201030800 65ff0bab geozone_binding%s
 D interfac.ads		20240521074738 15f799c2 interfaces%s
 D i-c.ads		20240521074738 5c5a6c17 interfaces.c%s
 D system.ads		20240521074738 426dafb8 system%s
@@ -27,44 +27,40 @@ D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
 D s-parame.ads		20240904144414 1f39ba92 system.parameters%s
 D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
 G a e
-G c Z s s [check_circle_zone geozone_binding 47 14 none]
-G c Z s s [check_polygon_zone geozone_binding 54 14 none]
+G c Z s s [check_circle_zone geozone_binding 35 14 none]
+G c Z s s [check_polygon_zone geozone_binding 42 14 none]
 G c Z s s [geo_pointIP geozone_binding 7 9 none]
 G c Z s s [geo_circleIP geozone_binding 13 9 none]
 G c Z s s [Tpoint_arrayBIP geozone_binding 19 4 none]
 G c Z s s [geo_polygonIP geozone_binding 22 9 none]
 G c Z s s [geo_zone_resultIP geozone_binding 28 9 none]
 X 3 geozone_binding.ads
-3K9*Geozone_Binding 61l5 61e20
+3K9*Geozone_Binding 49l5 49e20
 5N4*Max_Polygon_Points 19r36
-7R9*Geo_Point 10e14 11r26 14r23 19r63 35r37
+7R9*Geo_Point 10e14 11r26 14r23 19r63 37r33 38r33 44r33 45r33
 8f7*Latitude{5|98F9}
 9f7*Longitude{5|98F9}
-13R9*Geo_Circle 16e14 17r26 38r38
+13R9*Geo_Circle 16e14 17r26 36r33
 14r7*Center{7R9}
 15f7*Radius_Meters{5|98F9}
 19A9*Point_Array(7R9)<integer> 20r26 23r20
-22R9*Geo_Polygon 25e14 26r26 41r39
+22R9*Geo_Polygon 25e14 26r26 43r33
 23a7*Points{19A9}
 24i7*Num_Points{5|57I9}
-28R9*Geo_Zone_Result 32e14 33r26 44r43
+28R9*Geo_Zone_Result 32e14 33r26 39r24 46r24
 29i7*In_Zone{5|57I9}
 30i7*Will_Cross{5|57I9}
 31i7*Will_End_In{5|57I9}
-35P9*Geo_Point_Ptr(7R9) 36r26 49r17 50r17 56r17 57r17
-38P9*Geo_Circle_Ptr(13R9) 39r26 48r17
-41P9*Geo_Polygon_Ptr(22R9) 42r26 55r17
-44P9*Geo_Zone_Result_Ptr(28R9) 45r26 51r17 58r17
-47U14*Check_Circle_Zone 48>7 49>7 50>7 51>7 52b<c,check_circle_zone>22
-48p7 Zone{38P9}
-49p7 Current{35P9}
-50p7 Future{35P9}
-51p7 Result{44P9}
-54U14*Check_Polygon_Zone 55>7 56>7 57>7 58>7 59b<c,check_polygon_zone>22
-55p7 Zone{41P9}
-56p7 Current{35P9}
-57p7 Future{35P9}
-58p7 Result{44P9}
+35U14*Check_Circle_Zone 36^7 37^7 38^7 39^7 40b<c,check_circle_zone>22
+36p7 Zone(13R9)
+37p7 Current(7R9)
+38p7 Future(7R9)
+39p7 Result(28R9)
+42U14*Check_Polygon_Zone 43^7 44^7 45^7 46^7 47b<c,check_polygon_zone>22
+43p7 Zone(22R9)
+44p7 Current(7R9)
+45p7 Future(7R9)
+46p7 Result(28R9)
 X 4 interfac.ads
 38K9*Interfaces 3|1r6 1r24 4|232e15
 X 5 i-c.ads

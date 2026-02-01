@@ -32,30 +32,18 @@ package Geozone_Binding is
    end record;
    pragma Convention (C, Geo_Zone_Result);
 
-   type Geo_Point_Ptr is access all Geo_Point;
-   pragma Convention (C, Geo_Point_Ptr);
-
-   type Geo_Circle_Ptr is access all Geo_Circle;
-   pragma Convention (C, Geo_Circle_Ptr);
-
-   type Geo_Polygon_Ptr is access all Geo_Polygon;
-   pragma Convention (C, Geo_Polygon_Ptr);
-
-   type Geo_Zone_Result_Ptr is access all Geo_Zone_Result;
-   pragma Convention (C, Geo_Zone_Result_Ptr);
-
    procedure Check_Circle_Zone
-     (Zone    : Geo_Circle_Ptr;
-      Current : Geo_Point_Ptr;
-      Future  : Geo_Point_Ptr;
-      Result  : Geo_Zone_Result_Ptr);
+     (Zone    : access constant Geo_Circle;
+      Current : access constant Geo_Point;
+      Future  : access constant Geo_Point;
+      Result  : access Geo_Zone_Result);
    pragma Import (C, Check_Circle_Zone, "check_circle_zone");
 
    procedure Check_Polygon_Zone
-     (Zone    : Geo_Polygon_Ptr;
-      Current : Geo_Point_Ptr;
-      Future  : Geo_Point_Ptr;
-      Result  : Geo_Zone_Result_Ptr);
+     (Zone    : access constant Geo_Polygon;
+      Current : access constant Geo_Point;
+      Future  : access constant Geo_Point;
+      Result  : access Geo_Zone_Result);
    pragma Import (C, Check_Polygon_Zone, "check_polygon_zone");
 
 end Geozone_Binding;
