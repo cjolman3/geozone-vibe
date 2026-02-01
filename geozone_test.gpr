@@ -9,7 +9,7 @@ project Geozone_Test is
    for Main use ("test_weapon.adb");
 
    package Compiler is
-      for Switches ("Ada") use ("-gnat95", "-g", "-O2");
+      for Switches ("Ada") use ("-gnat05", "-g", "-O2");
    end Compiler;
 
    package Linker is

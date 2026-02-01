@@ -44,8 +44,8 @@ begin
    Current.Longitude := -105.001;
    Future.Latitude := 40.05;
    Future.Longitude := -105.05;
-   Check_Circle_Zone (Circle'Unchecked_Access, Current'Unchecked_Access,
-                      Future'Unchecked_Access, Result'Unchecked_Access);
+   Check_Circle_Zone (Circle'Access, Current'Access,
+                      Future'Access, Result'Access);
    Print_Result ("Circle: Weapon starts inside", Result);
 
    -- Test 2: Weapon outside circle, path crosses through
@@ -54,8 +54,8 @@ begin
    Current.Longitude := -105.0;
    Future.Latitude := 40.02;
    Future.Longitude := -105.0;
-   Check_Circle_Zone (Circle'Unchecked_Access, Current'Unchecked_Access,
-                      Future'Unchecked_Access, Result'Unchecked_Access);
+   Check_Circle_Zone (Circle'Access, Current'Access,
+                      Future'Access, Result'Access);
    Print_Result ("Circle: Path crosses zone", Result);
 
    -- Test 3: Weapon completely outside circle
@@ -64,8 +64,8 @@ begin
    Current.Longitude := -106.0;
    Future.Latitude := 41.5;
    Future.Longitude := -106.5;
-   Check_Circle_Zone (Circle'Unchecked_Access, Current'Unchecked_Access,
-                      Future'Unchecked_Access, Result'Unchecked_Access);
+   Check_Circle_Zone (Circle'Access, Current'Access,
+                      Future'Access, Result'Access);
    Print_Result ("Circle: Completely outside", Result);
 
    -- Test 4: Weapon heading into circle (will end in zone)
@@ -74,8 +74,8 @@ begin
    Current.Longitude := -105.0;
    Future.Latitude := 40.002;
    Future.Longitude := -105.001;
-   Check_Circle_Zone (Circle'Unchecked_Access, Current'Unchecked_Access,
-                      Future'Unchecked_Access, Result'Unchecked_Access);
+   Check_Circle_Zone (Circle'Access, Current'Access,
+                      Future'Access, Result'Access);
    Print_Result ("Circle: Will end in zone", Result);
 
    -- Set up a square polygon zone around (35.0, -100.0)
@@ -96,8 +96,8 @@ begin
    Current.Longitude := -100.0;
    Future.Latitude := 35.0;
    Future.Longitude := -100.0;
-   Check_Polygon_Zone (Polygon'Unchecked_Access, Current'Unchecked_Access,
-                       Future'Unchecked_Access, Result'Unchecked_Access);
+   Check_Polygon_Zone (Polygon'Access, Current'Access,
+                       Future'Access, Result'Access);
    Print_Result ("Polygon: Weapon inside", Result);
 
    -- Test 6: Weapon path crosses polygon
@@ -106,8 +106,8 @@ begin
    Current.Longitude := -100.0;
    Future.Latitude := 35.05;
    Future.Longitude := -100.0;
-   Check_Polygon_Zone (Polygon'Unchecked_Access, Current'Unchecked_Access,
-                       Future'Unchecked_Access, Result'Unchecked_Access);
+   Check_Polygon_Zone (Polygon'Access, Current'Access,
+                       Future'Access, Result'Access);
    Print_Result ("Polygon: Path crosses zone", Result);
 
    -- Test 7: Weapon completely outside polygon
@@ -116,8 +116,8 @@ begin
    Current.Longitude := -101.0;
    Future.Latitude := 36.5;
    Future.Longitude := -101.5;
-   Check_Polygon_Zone (Polygon'Unchecked_Access, Current'Unchecked_Access,
-                       Future'Unchecked_Access, Result'Unchecked_Access);
+   Check_Polygon_Zone (Polygon'Access, Current'Access,
+                       Future'Access, Result'Access);
    Print_Result ("Polygon: Completely outside", Result);
 
    -- Test 8: Triangle zone with weapon path clipping corner
@@ -133,8 +133,8 @@ begin
    Current.Longitude := -90.01;
    Future.Latitude := 30.01;
    Future.Longitude := -89.89;
-   Check_Polygon_Zone (Polygon'Unchecked_Access, Current'Unchecked_Access,
-                       Future'Unchecked_Access, Result'Unchecked_Access);
+   Check_Polygon_Zone (Polygon'Access, Current'Access,
+                       Future'Access, Result'Access);
    Print_Result ("Triangle: Path clips through", Result);
 
    Put_Line ("=== ALL TESTS COMPLETE ===");
